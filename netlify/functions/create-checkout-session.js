@@ -1,5 +1,3 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-
 exports.handler = async (event, context) => {
   // Enable CORS
   const headers = {
@@ -26,6 +24,21 @@ exports.handler = async (event, context) => {
   }
 
   try {
+    // Debug: Check if environment variable exists
+    console.log('STRIPE_SECRET_KEY exists:', !!process.env.STRIPE_SECRET_KEY);
+    console.log('STRIPE_SECRET_KEY first 10 chars:', process.env.STRIPE_SECRET_KEY?.substring(0, 10));
+    
+    if (!process.env.STRIPE_SECRET_KEY) {
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ error: 'Stripe secret key not configured' }),
+      };
+    }
+    
+    // Initialize Stripe with the secret key
+    const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+    
     const { amount, currency = 'eur' } = JSON.parse(event.body);
 
     // Create Stripe checkout session
