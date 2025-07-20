@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund My Porsche - Help Me Buy My Dream Car</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>🏎️ Need Money for Porsche</h1>
+            <p class="subtitle">Help me fulfill my dream of owning a Porsche!</p>
+            
+            <div class="donation-section">
+                <button id="donate-button" class="donate-btn">
+                    Donate €1 ❤️
+                </button>
+                <p class="donation-info">Every euro counts towards my Porsche fund!</p>
+            </div>
+            
+            <div class="progress-section">
+                <p class="dream-text">Your support means everything to me 🙏</p>
+            </div>
+        </div>
+        
+        <!-- Thank you message (hidden by default) -->
+        <div id="thank-you" class="thank-you-section" style="display: none;">
+            <h2>🎉 Thank You!</h2>
+            <p>Your €1 donation has been received!</p>
+            <p>You've just helped me get one step closer to my Porsche dream!</p>
+            <button onclick="location.reload()" class="donate-again-btn">Donate Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
