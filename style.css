@@ -131,18 +131,19 @@ body {
 
 .logo-container {
     margin-bottom: 30px;
-    animation: logoGlow 3s ease-in-out infinite alternate;
+    background: transparent;
 }
 
 .porsche-logo {
     height: 80px;
     width: auto;
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+    background: transparent;
+    mix-blend-mode: normal;
     transition: all 0.3s ease;
 }
 
 .porsche-logo:hover {
-    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));
+    filter: brightness(1.1);
     transform: scale(1.05);
 }
 
