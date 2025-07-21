@@ -5,15 +5,15 @@
 }
 
 :root {
-    --primary-color: #00ff41;
-    --secondary-color: #0066ff;
-    --accent-color: #ff0066;
+    --primary-color: #ffffff;
+    --secondary-color: #ffffff;
+    --accent-color: #ffffff;
     --bg-dark: #0a0a0a;
     --bg-darker: #000000;
     --text-light: #ffffff;
-    --text-dim: #888888;
-    --tech-blue: #00d4ff;
-    --porsche-gold: #ffb000;
+    --text-dim: #cccccc;
+    --tech-blue: #ffffff;
+    --porsche-gold: #ffffff;
 }
 
 body {
@@ -135,15 +135,31 @@ body {
 }
 
 .porsche-logo {
-    height: 60px;
+    height: 80px;
     width: auto;
-    filter: brightness(1.1) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
     transition: all 0.3s ease;
 }
 
 .porsche-logo:hover {
-    filter: brightness(1.3) drop-shadow(0 0 30px rgba(255, 176, 0, 0.6));
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));
     transform: scale(1.05);
+}
+
+.porsche-text-container {
+    margin: 20px 0;
+}
+
+.porsche-text {
+    height: 40px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+    transition: all 0.3s ease;
+}
+
+.porsche-text:hover {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.7));
+    transform: scale(1.02);
 }
 
 @keyframes logoGlow {
@@ -151,28 +167,24 @@ body {
         filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
     }
     100% {
-        filter: drop-shadow(0 0 25px rgba(255, 176, 0, 0.4));
+        filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.4));
     }
 }
 
 .main-title {
-    font-family: 'Orbitron', monospace;
+    font-family: '911porscha', 'Orbitron', monospace;
     font-size: 3.5em;
-    font-weight: 900;
-    background: linear-gradient(45deg, var(--primary-color), var(--tech-blue), var(--porsche-gold));
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradientShift 3s ease-in-out infinite alternate;
+    font-weight: normal;
+    color: var(--text-light);
     letter-spacing: 4px;
     margin-bottom: 30px;
-    text-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    animation: textGlow 3s ease-in-out infinite alternate;
 }
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+@keyframes textGlow {
+    0% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
+    100% { text-shadow: 0 0 25px rgba(255, 255, 255, 0.6); }
 }
 
 .subtitle-container {
@@ -196,20 +208,20 @@ body {
 }
 
 .subtitle {
-    font-family: 'Orbitron', monospace;
+    font-family: '911porscha', 'Orbitron', monospace;
     font-size: 0.9em;
-    font-weight: 400;
-    color: var(--tech-blue);
+    font-weight: normal;
+    color: var(--text-light);
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 /* Donation Section */
 .section-title {
-    font-family: 'Orbitron', monospace;
+    font-family: '911porscha', 'Orbitron', monospace;
     font-size: 1.4em;
-    font-weight: 700;
-    color: var(--primary-color);
+    font-weight: normal;
+    color: var(--text-light);
     margin-bottom: 40px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -248,19 +260,20 @@ body {
 }
 
 .amount {
-    font-family: 'Orbitron', monospace;
+    font-family: '911porscha', 'Orbitron', monospace;
     font-size: 1.8em;
-    font-weight: 900;
+    font-weight: normal;
     color: var(--text-light);
     margin-bottom: 5px;
 }
 
 .label {
+    font-family: '911porscha', 'Orbitron', monospace;
     font-size: 0.7em;
-    color: var(--primary-color);
+    color: var(--text-light);
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: normal;
 }
 
 .btn-glow {
@@ -325,12 +338,12 @@ body {
 }
 
 .stat-number {
-    font-family: 'Orbitron', monospace;
+    font-family: '911porscha', 'Orbitron', monospace;
     font-size: 2.5em;
-    font-weight: 900;
-    color: var(--porsche-gold);
+    font-weight: normal;
+    color: var(--text-light);
     margin-bottom: 10px;
-    text-shadow: 0 0 20px rgba(255, 176, 0, 0.5);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .stat-label {
@@ -379,13 +392,13 @@ body {
 }
 
 .thank-you-title {
-    font-family: 'Orbitron', monospace;
+    font-family: '911porscha', 'Orbitron', monospace;
     font-size: 2.8em;
-    font-weight: 900;
-    color: var(--primary-color);
+    font-weight: normal;
+    color: var(--text-light);
     margin-bottom: 30px;
     letter-spacing: 3px;
-    text-shadow: 0 0 30px rgba(0, 255, 65, 0.5);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 .thank-you-message {
@@ -395,7 +408,7 @@ body {
 }
 
 .thank-you-subtitle {
-    color: var(--tech-blue);
+    color: var(--text-dim);
     font-size: 1em;
     margin-bottom: 40px;
     font-style: italic;
@@ -403,13 +416,13 @@ body {
 
 .contribute-again-btn {
     position: relative;
-    background: linear-gradient(145deg, rgba(0, 255, 65, 0.2), rgba(0, 102, 255, 0.2));
-    border: 2px solid var(--primary-color);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 2px solid var(--text-light);
     border-radius: 12px;
     padding: 15px 40px;
-    font-family: 'Orbitron', monospace;
+    font-family: '911porscha', 'Orbitron', monospace;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: normal;
     color: var(--text-light);
     cursor: pointer;
     overflow: hidden;
@@ -420,8 +433,8 @@ body {
 
 .contribute-again-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 255, 65, 0.4);
-    border-color: var(--tech-blue);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4);
+    border-color: var(--text-light);
 }
 
 /* Mobile Responsiveness */
@@ -461,7 +474,11 @@ body {
     }
     
     .porsche-logo {
-        height: 45px;
+        height: 60px;
+    }
+    
+    .porsche-text {
+        height: 30px;
     }
 }
 
