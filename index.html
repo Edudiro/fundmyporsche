@@ -11,11 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Animated Porsche Background -->
-    <div class="porsche-bg">
-        <div class="porsche-silhouette porsche-1"></div>
-        <div class="porsche-silhouette porsche-2"></div>
-        <div class="porsche-silhouette porsche-3"></div>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="porsche-background.mp4" type="video/mp4">
+            <!-- Fallback for browsers that don't support video -->
+        </video>
+        <div class="video-overlay"></div>
     </div>
     
     <!-- Grid overlay for tech effect -->
@@ -24,7 +26,10 @@
     <div class="container">
         <div class="main-content">
             <div class="header-section">
-                <h1 class="main-title">PORSCHE FUND</h1>
+                <div class="logo-container">
+                    <img src="porsche-logo.png" alt="Porsche" class="porsche-logo">
+                </div>
+                <h1 class="main-title">FUND MY PORSCHE</h1>
                 <div class="subtitle-container">
                     <span class="subtitle-line"></span>
                     <p class="subtitle">ACCELERATING DREAMS INTO REALITY</p>
